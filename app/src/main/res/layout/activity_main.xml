@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/header_title">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/corona1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/corona"
+                />
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="400dp"
+                android:layout_height="wrap_content"
+                android:text="Berliana Andra Arianti"
+                android:layout_toRightOf="@+id/corona1"
+                android:textAlignment="center"
+                />
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="400dp"
+                android:layout_height="wrap_content"
+                android:text="123180065"
+                android:layout_toRightOf="@+id/corona1"
+                android:layout_below="@+id/text1"
+                android:textAlignment="center"
+                />
+            <ImageView
+                android:id="@+id/corona2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/corona"
+                android:layout_alignRight="@+id/text1"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kasus Covid-19 JABAR"
+        android:layout_below="@+id/header_title"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textColor="@color/teal_200"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcv_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text3"
+        android:layout_above="@+id/menu_bawah"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:listitem="@layout/item_kasus" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/menu_bawah"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/teal_200"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        app:menu="@menu/menu" />
+
+</RelativeLayout>
