@@ -19,7 +19,7 @@ import java.util.ArrayList;
 public class FaskesAdapter extends RecyclerView.Adapter<FaskesAdapter.ViewHolder> {
     private ArrayList<DataItem> faskes = new ArrayList<>();
 
-    public void setFaskes(ArrayList<DataItem> body) {
+    public void setFaskes(ArrayList<DataItem> faskes) {
         this.faskes.clear();
         this.faskes.addAll(faskes);
         // update tampilan jika terdapat perubahan data
