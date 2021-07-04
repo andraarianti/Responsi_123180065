@@ -39,8 +39,8 @@ public class FaskesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_faskes);
         faskesAdapter = new FaskesAdapter();
-        menu = menu.findViewById(R.id.menu_bawah);
-        rcv_rs = rcv_rs.findViewById(R.id.rcv_rs);
+        menu = findViewById(R.id.menu_bawah);
+        rcv_rs = findViewById(R.id.rcv_rs);
 
         rcv_rs.setLayoutManager(new LinearLayoutManager(this));
         rcv_rs.setHasFixedSize(true);
